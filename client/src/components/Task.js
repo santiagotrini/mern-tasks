@@ -1,15 +1,29 @@
+import { useState } from 'react';
 const Task = props => {
   // props
-  const { text, done } = props.task;
+  const { removeTask, task, updateTask } = props;
+  // hooks
+  const [done, setDone] = useState(task.done);
 
   const handleClick = e => {
-    console.log('no me elimines');
+    removeTask(task._id);
+  };
+
+  const handleChange = e => {
+    setDone(prevState => {
+      updateTask(task._id, !prevState);
+      return !prevState;
+    });
+
   };
 
   return (
     <li style={{ textDecoration: done ? 'line-through' : 'none' }}>
-      {text}
-      <input type="checkbox" />
+      {task.text}
+      <input
+        checked={done}
+        onChange={handleChange}
+        type="checkbox" />
       <button onClick={handleClick}>
         <i className="fa fa-lg fa-trash"></i>
       </button>

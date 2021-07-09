@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import axios from 'axios';
 
 const NewTask = props => {
   // props
+  const { addTask } = props;
   // hooks
   const [text, setText] = useState('');
   // handlers
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('submiteando');
+    addTask({ text });
     setText('');
   };
   // render
