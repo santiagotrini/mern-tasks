@@ -1,0 +1,24 @@
+{
+  "name": "mern-tasks",
+  "version": "1.0.0",
+  "description": "MERN tasks app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Santiago Trini",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.11"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0"
+  }
+}
