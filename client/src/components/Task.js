@@ -18,16 +18,21 @@ const Task = props => {
   };
 
   return (
-    <li style={{ textDecoration: done ? 'line-through' : 'none' }}>
-      {task.text}
+    <div
+      className="task"
+      style={{ textDecoration: done ? 'line-through' : 'none' }}>
+      <p className="taskText">{task.text}</p>
       <input
+        className="check"
         checked={done}
         onChange={handleChange}
         type="checkbox" />
-      <button onClick={handleClick}>
+      <button
+        className="trash"
+        onClick={handleClick}>
         <i className="fa fa-lg fa-trash"></i>
       </button>
-    </li>
+    </div>
   );
 };
 

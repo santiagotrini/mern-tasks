@@ -7,32 +7,48 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.task {
+  width: 50vw;
+  text-align: center;
+  margin: 10px auto;
+  padding: 5px 0;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 5px 5px 3px #aaa;
+}
 
+.taskText {
+  margin: 0 auto;
+}
 
+.trash {
+  margin: 0 10px;
+  background: transparent;
+  border: transparent;
+}
+
+.check {
+  margin: 0 10px;
+}
+
+.list {
+  margin: 10px 0;
+}
+
+input {
+  margin: 0 5px;
+}
+
+form {
+  width: 50vw;
+  margin: 0 auto;
+}
 
 .container {
   width: 90vw;
   text-align: center;
   margin: auto;
-}
-
-input {
-  margin: 0 2px;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 10px 10px;
-}
-
-button {
-  margin: 0 20px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

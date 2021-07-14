@@ -20,7 +20,11 @@ const NewTask = props => {
         placeholder="Nueva tarea"
         onChange={e => setText(e.target.value)}
       />
-      <input type="submit" value="Agregar"/>
+      <input
+        className="btn"
+        type="submit"
+        value="Agregar"
+      />
     </form>
   );
 };

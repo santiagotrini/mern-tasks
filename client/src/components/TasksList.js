@@ -4,7 +4,7 @@ const TasksList = props => {
   const { tasks, removeTask, updateTask } = props;
 
   return (
-    <ul>
+    <div className="list">
       {tasks.map(task => (
         <Task
           key={task._id}
@@ -13,7 +13,7 @@ const TasksList = props => {
           updateTask={updateTask}
         />
       ))}
-    </ul>
+    </div>
   );
 };
 
