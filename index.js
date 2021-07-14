@@ -17,6 +17,7 @@ mongoose.connect(DB, {
   .catch(err => console.log(err));
 // middlewares
 app.use(morgan('dev'));
+app.use(express.static('public'));
 app.use(express.json());
 // api router
 app.use('/api', require('./api/task'));
